@@ -1,23 +1,58 @@
-# === Base PHP ignore rules ===
-vendor/
-*.log
-*.bak
-*.tmp
-*.swp
-
-# === 5CMS specific ===
-/config/
-/cache/
-/storage/
-/files/
-/import/
-/export/
-/backup/
-
-# === IDE and system ===
-.idea/
-.vscode/
+# === OS / системное ===
 .DS_Store
 Thumbs.db
-*.zip
+ehthumbs.db
+Icon?
+*.swp
+*~
+*.tmp
+*.bak
+*.orig
+*.log
+*.tgz
+*.tar
 *.tar.gz
+*.zip
+
+# === IDE / редакторы ===
+.vscode/
+.idea/
+*.code-workspace
+
+# === Переменные окружения ===
+.env
+.env.*
+!.env.example
+
+# === Node / фронтенд-сборки (если есть) ===
+node_modules/
+npm-debug.log*
+pnpm-lock.yaml
+yarn.lock
+/.parcel-cache/
+/dist/
+/build/
+/public/build/
+/assets/build/
+/assets/.cache/
+
+# === Composer / PHP-зависимости (если есть) ===
+/vendor/
+composer.lock
+
+# === 5CMS / SimplaCMS-специфика (если репозиторий в корне сайта) ===
+/config/          # ключи/доступы CMS
+/cache/           # кэш
+/storage/         # временные файлы/сессии
+/files/           # пользовательские аплоды
+/import/          # импорты
+/export/          # экспорты
+/backup/          # бэкапы
+/logs/            # логи
+
+# Если репозиторий — только ТЕМА, то выше папки не заденут.
+# В теме храним: html/, css/, js/, images/, theme.xml — их НЕ игнорируем.
+
+# === Разное ===
+/.ssh/
+.sentryclirc
