@@ -1,0 +1,39 @@
+# Нормализуем переводы строк
+* text=auto eol=lf
+
+# Скрипты Windows
+*.bat eol=crlf
+*.cmd eol=crlf
+
+# Файлы шаблонов 5CMS (Smarty)
+*.tpl text linguist-language=Smarty
+
+# Подсказки для diff
+*.php  diff=php
+*.css  diff=css
+*.js   diff=javascript
+*.html diff=html
+*.svg  text
+
+# Минифицированные бандлы считаем сгенерированными
+*.min.js  linguist-generated=true
+*.min.css linguist-generated=true
+
+# Бинарные форматы
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.eot   binary
+
+# Не включать служебные файлы в архивы релизов
+.gitignore     export-ignore
+.gitattributes export-ignore
+.editorconfig  export-ignore
+.github/       export-ignore
